@@ -27,3 +27,8 @@
 ###> doctrine/migrations ###
 /migrations/
 ###< doctrine/migrations ###
+
+
+###> vscode ###
+/.vscode/
+###< vscode ###
