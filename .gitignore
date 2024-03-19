@@ -23,7 +23,3 @@
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
-
-###> uploaded-files ###
-/public/uploads/
-###< uploaded-files ###
