@@ -6,7 +6,6 @@ use PHPUnit\Framework\TestCase;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use App\Service\Upload\UploadXLS;
-use Carbon\Carbon;
 use Mockery as m;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -49,8 +48,5 @@ class UploadXLSTest extends TestCase
 
         // Assert that the result is an instance of Spreadsheet
         $this->assertInstanceOf(Spreadsheet::class, $result);
-
-        // Reset Carbon::now() to normal behavior
-        Carbon::setTestNow();
     }
 }
