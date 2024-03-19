@@ -24,6 +24,10 @@
 /assets/vendor/
 ###< symfony/asset-mapper ###
 
+###> uploaded-files ###
+/public/uploads/
+###< uploaded-files ###
+
 ###> doctrine/migrations ###
 /migrations/
 ###< doctrine/migrations ###
