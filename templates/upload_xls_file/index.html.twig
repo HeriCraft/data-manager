@@ -1,20 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello UploadXLSFileController!{% endblock %}
+{% block title %}Data Manager|Upload XLS File{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/hericraft/Documents/test-ëtalik/data-manager/src/Controller/UploadXLSFileController.php</code></li>
-        <li>Your template at <code>/home/hericraft/Documents/test-ëtalik/data-manager/templates/upload_xls_file/index.html.twig</code></li>
-    </ul>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3>Upload de fichier en format Excel (XLS ou XLSX)</h3>
+        </div>    
+    </div>
+    <div class="col-md-6 offset-md-3 row align-items-center">
+        {{ form_start(form) }}
+            {{ form_errors(form) }}
+            {{ form_errors(form.file) }}
+            <div class="mb-3">
+                {{ form_row(form.file) }}
+            </div>
+            {{ form_row(form.upload) }}
+        {{ form_end(form) }}
+    </div>
 </div>
 {% endblock %}
