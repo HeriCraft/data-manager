@@ -5,10 +5,11 @@ namespace App\Service\Upload;
 use Carbon\Carbon;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class UploadXLS
 {
-    public function upload(mixed $file): Spreadsheet
+    public function upload(UploadedFile $file): Spreadsheet
     {
         $uploadedFileFolder = __DIR__.'/../../../public/uploads/';
 
