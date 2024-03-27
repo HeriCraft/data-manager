@@ -70,9 +70,9 @@ class UploadXLSFileController extends AbstractController
             // WriteSpreadsheetDataToDatabase
             $writeSpreadsheetDataToDatabase->write($spreadsheet, $entityManager);
 
-            dd($entityManager->getRepository(VehiculeInfo::class)->findAll());
+            // dd($entityManager->getRepository(VehiculeInfo::class)->findAll());
             // Rediriger vers la page d'accueil
-            // return $this->redirectToRoute('app_home');
+            return $this->redirectToRoute('app_home');
         }
 
         return $this->render('upload_xls_file/index.html.twig', [
